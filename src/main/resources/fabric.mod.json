@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "keyboard-overlay",
+  "version": "${version}",
+  "name": "Keyboard Overlay",
+  "description": "A fully customisable on-screen keyboard overlay with pressed-key pulses, RGB modes, presets and a full settings menu.",
+  "authors": [
+    "Mitchell"
+  ],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/keyboard-overlay/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.keyboardoverlay.KeyboardOverlayMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.17.2",
+    "minecraft": "1.21.8",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
