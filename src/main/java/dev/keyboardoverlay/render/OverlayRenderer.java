@@ -155,12 +155,12 @@ public final class OverlayRenderer {
             boolean rgbOn = c.rgbMode != OverlayConfig.RgbMode.OFF;
 
             // base fill
-            int fillCol = scaleAlpha(p.fill, c.idleOpacity * c.fillOpacity);
+            int fillCol = scaleAlpha(p.fill(), c.idleOpacity * c.fillOpacity);
             if (c.useGradient && !rgbOn) {
-                fillCol = scaleAlpha(Palette.blendArgb(p.fill, c.gradientEndColor, ny), c.idleOpacity * c.fillOpacity);
+                fillCol = scaleAlpha(Palette.blendArgb(p.fill(), c.gradientEndColor, ny), c.idleOpacity * c.fillOpacity);
             }
             if (rgbOn) {
-                fillCol = scaleAlpha(RgbEngine.color(c, nx, ny, i, t, p.fill), c.idleOpacity * c.fillOpacity);
+                fillCol = scaleAlpha(RgbEngine.color(c, nx, ny, i, t, p.fill()), c.idleOpacity * c.fillOpacity);
             }
 
             // glow behind the key (bloom and spread)
